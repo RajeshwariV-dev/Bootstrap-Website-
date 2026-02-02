@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="descrption" content="Veggie Shop">
+  <title>Vegtable Vendor shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .navi {
+      background-color: rgb(3, 88, 3);
+      justify-content: space-evenly;
+    }
+
+    .navlist {
+      list-style-type: none;
+      gap: 15px;
+      justify-content: center;
+      align-content: center;
+
+    }
+
+    .hero-section {
+
+      background: url("https://plus.unsplash.com/premium_photo-1664302495846-8be51057b602?q=80&w=1448&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: white;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* background-color: rgb(0, 0, 0, 0.45); */
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 650px;
+    }
+
+    .cardvegie {
+      background: url(https://plus.unsplash.com/premium_photo-1722073663467-4a8e47f2eeac?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover no-repeat;
+    }
+
+    .cardfruit {
+      background: url(https://images.unsplash.com/photo-1520236060906-9c5ed525b025?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover no-repeat;
+    }
+
+    .cardTitle {
+      color: green;
+      font-weight: bolder;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .mid-banner {
+      background: url("https://i.pinimg.com/1200x/83/35/b5/8335b51ac60872f87269bd5682ca9c53.jpg") center/cover no-repeat;
+      min-height: 50vh;
+      margin: 10px;
+    }
+
+    .mid-content {
+      padding: 80px;
+    }
+
+    .card-bodys img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    .contain {
+      min-height: 350px;
+      width: 80rem;
+      background-color: rgb(187, 185, 185);
+      border-radius: 20px;
+      border-color: rgb(141, 142, 144);
+      padding: 10px 10px;
+      margin: 20px;
+    }
+
+    .card-first {
+      background: url(https://i.pinimg.com/736x/14/7d/a7/147da78eed9b93b07acc1fead706aa9d.jpg) center/cover no-repeat;
+    }
+
+    .organic-card {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+
+    .dis-banner {
+      background: url("https://i.pinimg.com/1200x/54/5d/95/545d9540caced7670d3287c65006424a.jpg") no-repeat center/cover;
+      max-height: 150vh;
+      margin: 10px;
+    }
+
+    .dis-content {
+      padding: 80px;
+    }
+
+    .fruitcard-first {
+      background: url(https://i.pinimg.com/736x/9f/c5/64/9fc5641f30d8f008833cd01eeb47bd0c.jpg) center/cover no-repeat;
+    }
+
+    .leftbanner {
+      background: url(https://i.pinimg.com/1200x/d1/38/6a/d1386aadc28b4c0644e33c5ed9303d82.jpg) center/cover no-repeat;
+      height: 300px;
+      width: 500px;
+    }
+
+    .rightbanner {
+      background: url(https://i.pinimg.com/736x/62/f0/9f/62f09fcba15b430e754ea0fd4b22950a.jpg) center/cover no-repeat;
+      height: 300px;
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- nav section -->
+  <nav class="navi navbar navbar-expand-lg g-10">
+    <h4 class="navbar-brand text-white fw-bold"><span style="color:rgb(195, 150, 17)">Q</span>UAil</h4>
+    <ul class="navlist navbar navbar-expand-lg text-white  px-3 d-flex justify-content-center">
+      <li>Home</li>
+      <li>Fruit</li>
+      <li>Salad</li>
+      <li>Jucies</li>
+      <li>Meat</li>
+      <li>Pages</li>
+      <li>Contact us</li>
+    </ul>
+
+    <div>
+      <textarea name="" id="" rows="1.5"></textarea>
+    </div>
+
+    <div class="text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px"; height="15px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+     </svg> Contact Us
+    </div>
+    <div class="text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25px"; height="25px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+      </svg> Cart List
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content py-5">
+          <h1 class="display-4 fw-bold  mb-3">Discover New Amazing <br>Grocery Deals </h1>
+          <p class="lead mb-4">We supply high quality organic product
+          </p>
+
+          <div>
+            <button class="btn btn-outline-light btn-lg bg-warning">Shop Now -></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="py-5 mt-5">
+    <div class="d-flex flex-row justify-content-evenly">
+      <div class="cardvegie rounded">
+        <div class="text-center p-4 border-0 shadow-sm h-50">
+          <h3 class="fw-light text-white">Vegatable</h3>
+          <h5 class="fw-semibold text-white" style="font-style: italic;">Green world</h5>
+          <h3 class="lead text-white">Get 50% OFF on selected items</h3>
+          <button class="btn btn-outline-light text-white">Learn More</button>
+        </div>
+      </div>
+
+      <div class="cardfruit rounded">
+        <div class="text-center p-4 border-0 shadow-sm h-100">
+          <h3 class="fw-light text-white">Fresh Fruits</h3>
+          <h5 class="text-white" style="font-style: italic;">Healthy Fruits</h5>
+          <h3 class="lead text-white">Get 40% OFF on selected items</h3>
+          <button class="btn btn-outline-light text-white">Learn More</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+    <div>
+      <h5 class="cardTitle text-center py-6">Fresh Product Daily!</h5>
+      <h6 class=" fw-light text-center" style="font-family: sans-serif">We bring you farm-fresh, high quality vegetables
+        that are carefully <br>
+        elected to ensure freshness,taste and nutrition.</h6>
+    </div>
+    <div class="text-center g-5">
+      <button class="btn  bg-warning text-black ms-2">New Products</button>
+      <button class="btn btn-outline-dark text-black ms-2">Hot Sale</button>
+      <button class="btn btn-outline-dark text-black ms-2">Best Selling</button>
+      <button class="btn btn-outline-dark text-black ms-2">Featured Product</button>
+    </div>
+
+  </section>
+
+  <!-- vegatable cart section -->
+  <section>
+    <div class="text-center mt-5 " style="display:grid-template-columns; justify-items: center; ">
+      <div class="row" style="gap:60px; margin-left:100px;">
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/1200x/e4/e5/3d/e4e53d7954350b6c75e8274e12281c51.jpg"
+              alt="brinjal-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">25.90$ / 1kg</p>
+              <p class="card-text text-semibold">Stuffing Black Egg Plant</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/1200x/9e/18/f5/9e18f57c7f60b96da5a33884e8fa9b43.jpg"
+              alt="cabbage-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">12.90$ / 1kg</p>
+              <p class="card-text text-semibold">Cabbage</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/1200x/d7/fa/70/d7fa7049e4467c7123d056c6ce1b04a6.jpg"
+              alt="onion-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">35.90$ / 1kg</p>
+              <p class="card-text text-semibold">Onion</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/1200x/d3/c6/8c/d3c68cf859a0d4e9ff68bc32e0fe05b9.jpg"
+              alt="bottleGaurd-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">15.90$ / 1kg</p>
+              <p class="card-text text-semibold">BottleGuard</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/736x/eb/51/bc/eb51bc159a71b06efdf4d51ebc8cead2.jpg"
+              alt="bottleGaurd-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">5.90$/ 1kg</p>
+              <p class="card-text text-semibold">Potato</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/1200x/3c/fa/64/3cfa64b99984f01aa5f2f57a89e77b64.jpg"
+              alt="bottleGaurd-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">10.90$/ 250kg</p>
+              <p class="card-text text-semibold">Garlic</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/1200x/ca/ff/b7/caffb7d299f1fae0912ccc9ab3fa60c7.jpg"
+              alt="bottleGaurd-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">2.90$/ 200g</p>
+              <p class="card-text text-semibold">Bell Peppers</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-12">
+          <div class="card rounded-4 border border-black" style="width:13rem; height:24rem ">
+            <img class="mt-2" src="https://i.pinimg.com/736x/01/66/26/0166261fa0018cbb019c459ea8588c06.jpg"
+              alt="bottleGaurd-img" style="max-height:250px;">
+            <div class="card-body">
+              <h5 class="lead fs-6 justify-content-start">Vegatable</h5>
+              <p class="card-text fw-bold text-danger">38.70$/ 1kg</p>
+              <p class="card-text text-semibold">Carrot</p>
+              <button class="btn btn-warning">Add Cart</button>
+              <button class="btn btn-success">Buy</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <button class="btn btn-warning text-white fw-bold">View all product -></button>
+    </div>
+
+  </section>
+  <!-- mid banner section -->
+  <section class="mid-banner mt-2">
+    <div class="mid-overlay">
+      <div class="mid-content">
+        <h6 style="font-style: italic;">Best Product</h6>
+        <h3 class="fw-bold" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+          Shop In Store <br> 50% Off
+        </h3>
+        <h6 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+          Fresh vegetables sourced directly from local farmers.<br>Carefully selected for freshness, flavor, and quality
+          which
+          <br> daily dose the healthy lifestyle with boosty veggie.
+        </h6>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Organic cart section -->
+  <section>
+    <div class="contain">
+      <div class="text-center mt-3 mb-3" style="display:grid-template-columns;">
+        <div class="row" style="gap:80px; margin-left: 50px;">
+        <div class=text-end>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"height="30px"; width="30px";>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+              </div>
+          <div class="col-lg-2 col-md-3 col-12 mt-1">
+            <div class="card-first"
+              style="width:15rem; height:20rem; border:solid; border-radius:30px; border-color: rgb(54, 54, 52);">
+              
+              <div class="text-start"> <button class="btn btn-warning mt-2 ms-2">20% Off checkout</button></div>
+              <p class="text-start ms-2" style="font-size:25px; color:rgb(248, 250, 248);">Sourced From <br>Organic</p>
+              <p class="fw-bold" style="color:rgb(209, 189, 5)">Shop Now -></p>
+              <button class="btn btn-success mt-5">Veggie's Combo</button>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-12">
+            <div style="width:15rem; height:20rem; border:solid; border-radius:30px; border-color: rgb(54, 54, 52);">
+              <div>
+                <div class="mt-2 " style="display:flex; ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" height="30px" width="40px">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </div>
+                <div class="text-end organic-card">
+                  <button class="btn btn-warning ">Add cart</button>
+                </div>
+              </div>
+              <div>
+
+                <img src="assets/download-removebg-preview.png" alt="" style="height:150px; width:100px" ;>
+                <h5 style="color:rgb(2, 41, 11)">Spinach</h5>
+
+                <div style="display:flex; gap:25px; margin-left: 15px;">
+                  <p style="margin-top:25px; color:rgb(230, 6, 6); font-weight: bold;">20$/ per 200g</p>
+                  <img src="assets/4half-removebg-preview.png" alt="" style="height:80px; width:60px;">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-12">
+            <div style="width:15rem; height:20rem; border:solid; border-radius:30px; border-color: rgb(54, 54, 52);">
+              <div>
+                <div class="mt-2 " style="display:flex; ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" height="30px" width="40px">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </div>
+                <div class="text-end organic-card">
+                  <button class="btn btn-warning ">Add cart</button>
+                </div>
+              </div>
+              <div>
+
+                <img src="assets/broccoli_white_background-removebg-preview.png" alt=""
+                  style="height:150px; width:100px" ;>
+                <h5 style="color:rgb(2, 41, 11)">Brocolli</h5>
+
+                <div style="display:flex; gap:25px; margin-left: 15px;">
+                  <p style="margin-top:25px; color:rgb(230, 6, 6); font-weight: bold;">4.60$/ per 2kg</p>
+                  <img src="assets/4half-removebg-preview.png" alt="" style="height:80px; width:60px;">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-12">
+            <div style="width:15rem; height:20rem; border:solid; border-radius:30px; border-color: rgb(54, 54, 52);">
+              <div>
+                <div class="mt-2 " style="display:flex; ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" height="30px" width="40px">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </div>
+                <div class="text-end organic-card">
+                  <button class="btn btn-warning ">Add cart</button>
+                </div>
+              </div>
+              <div>
+
+                <img src="assets/Aspargus-removebg-preview.png" alt="" style="height:150px; width:100px" ;>
+                <h5 style="color:rgb(2, 41, 11)">Asparagus</h5>
+
+                <div style="display:flex; gap:25px; margin-left: 15px;">
+                  <p style="margin-top:25px; color:rgb(230, 6, 6); font-weight: bold;">2.70$/ per 500g</p>
+                  <img src="assets/4half-removebg-preview.png" alt="" style="height:80px; width:60px;">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <button class="btn btn-warning text-white fw-bold">View all items -></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discount banner section -->
+  <section class="dis-banner mt-2">
+    <div class="dis-overlay">
+      <div class="dis-content text-center text-white">
+        <h3 class="fw-bold" style="font-family: cursive;">
+          Free Delivery for first Order & <br> every $300 above Purchases
+        </h3>
+        <button class="btn btn-success">Buy Now</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Fruit section -->
+
+  <section>
+    <div class="container">
+      <div class="text-center mt-3 mb-3" style="display:grid-template-columns;">
+        <div class="row" style="gap:80px; margin-left: 50px;">
+
+          <div class="col-lg-2 col-md-3 col-12">
+            <div class="fruitcard-first"
+              style="width:13rem; height:20rem; border:none; border-radius:20px; border-color: rgb(54, 54, 52);">
+              <div class="text-start"> <button class="btn btn-warning mt-2 ms-2">50% Off checkout</button></div>
+              <p class="text-start ms-2 fw-bold py-2" style="font-size:25px; color:rgb(249, 245, 245);">Juicy Fruits &
+                <br>Fresh Organic</p>
+              <p class="fw-bold" style="color:rgb(110, 203, 4)">Shop Now -></p>
+              <button class="btn btn-success mt-5">Fuirts Variety</button>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-12">
+            <div
+              style="width:13rem; height:20rem;color:rgb(224, 40, 12);border:solid; border-radius:20px; border-color: rgb(179, 64, 7) ;">
+              <div style="display:flex; justify-content: space-between;">
+                <div style="border:solid; border-radius: 30px; color: rgb(240, 237, 236); margin:1px 3px; background-color: red;">Hot Sale</div>
+                <div class="text-end"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" height="30px" width="40px">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg> </div>
+              </div>
+              <img src="assets/Apples__2_lb-removebg-preview.png" alt=""
+                style="height:150px; width:160px; margin-top:6px;">
+              <h4 class="text-start" style="color:rgb(12, 104, 35)">Kashmir Apples</h4>
+              <p style="font-size: 15px; font-weight: bold; text-align: start; margin:2px; color:rgb(232, 15, 15); ">
+                60$/perKg</p>
+              <div style="display:flex; gap:1px; margin-top:20px;">
+                <img src="assets/4half-removebg-preview.png" alt="" style="height: 60px; width:80px;">
+                <p style="margin-top:18px; font-family: 'Times New Roman', Times, serif;">4.5K</p>
+                <button class="btn btn-success ms-3" style="height:50px; width:65px;">Buy</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-12">
+            <div
+              style="width:13rem; height:20rem;color:rgb(224, 40, 12);border:solid; border-radius:20px; border-color: rgb(179, 64, 7) ;">
+              <div style="display:flex; justify-content: space-between;">
+                <div style="border:solid; border-radius: 10px; color: rgb(240, 237, 236); margin:1px 3px; background-color: red; ">Hot Sale</div>
+                <div class="text-end"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" height="30px" width="40px">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg> </div>
+              </div>
+              <img src="assets/piña___1_-removebg-preview.png" alt=""
+                style="height:150px; width:160px; margin-top:6px;">
+              <h4 class="text-start" style="color:rgb(12, 104, 35)">PineApple</h4>
+              <p style="font-size: 15px; font-weight: bold; text-align: start; margin:2px; color:rgb(232, 15, 15); ">
+                20$/perKg</p>
+              <div style="display:flex; gap:1px; margin-top:20px;">
+                <img src="assets/4half-removebg-preview.png" alt="" style="height: 60px; width:80px;">
+                <p style="margin-top:18px; font-family: 'Times New Roman', Times, serif;">4.5K</p>
+                <button class="btn btn-success ms-3" style="height:50px; width:65px;">Buy</button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-12">
+            <div
+              style="width:13rem; height:20rem;color:rgb(224, 40, 12);border:solid; border-radius:20px; border-color: rgb(179, 64, 7) ;">
+              <div style="display:flex; justify-content: space-between;">
+                <div style="border:solid; border-radius: 30px; color: rgb(240, 237, 236); margin:1px 3px; background-color: red; ">Hot Sale</div>
+                <div class="text-end"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" height="30px" width="40px">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg> </div>
+              </div>
+              <img src="assets/strawberryremovebg-preview.png" alt=""
+                style="height:150px; width:160px; margin-top:6px;">
+              <h4 class="text-start" style="color:rgb(12, 104, 35)">StrawBeery</h4>
+              <p style="font-size: 15px; font-weight: bold; text-align: start; margin:2px; color:rgb(232, 15, 15); ">
+                30$/perKg</p>
+              <div style="display:flex; gap:1px; margin-top:20px;">
+                <img src="assets/4half-removebg-preview.png" alt="" style="height: 60px; width:80px;">
+                <p style="margin-top:18px; font-family: 'Times New Roman', Times, serif;">4.5K</p>
+                <button class="btn btn-success ms-3" style="height:50px; width:65px;">Buy</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discount section  -->
+  <section>
+    <div style="display:flex; justify-content: space-between; margin:50px 50px;">
+
+      <div class="leftbanner">
+        <p style="color: rgb(30, 98, 1); margin-left:150px; margin-top:80px; font-family: cursive; font-size: medium;">
+          Vegtable Discount</p>
+        <h3
+          style="margin-left:150px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:rgb(1, 62, 1)">
+          Health Kitchen <br> With Freshio</h3>
+        <div style="border:solid; border-radius:12px; font-family:Arial, Helvetica, sans-serif; width:110px; padding:2px; margin-left:160px; background-color: rgb(212, 150, 16); color:rgb(243, 238, 238);">Shop Now
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" height="20px;"width="20px";>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="rightbanner" style="margin-top:100px;">
+        <p style="color: rgb(199, 161, 8); margin-left:50px; margin-top:80px; font-family: cursive; font-size: medium;">
+          Fruit Discount</p>
+        <h3
+          style="margin-left:50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:rgb(221, 206, 72)">
+          Get $20.0 Off <br> All Products</h3>
+        <div style="border:solid; border-radius:12px; font-family:Arial, Helvetica, sans-serif; width:110px; padding:2px; margin-left:60px; background-color: rgb(56, 117, 6); color:rgb(243, 238, 238);">Shop Now
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" height="20px;"width="20px";>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer class="py-5 text-center" style="max-height:200px; background-color: rgb(1, 37, 1); color:aliceblue" >
+        <p>&copy; 2026 Quail Vegiee Shop. All Rights Reserved</p>
+           <p>For Orders:</p>
+           <p>Contact us : xyr@gmail.com</p>
+           <p>Phone : +097 65876 67875</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
